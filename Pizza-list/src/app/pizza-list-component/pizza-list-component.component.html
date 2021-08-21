@@ -1,0 +1,14 @@
+<table border="1" *ngIf="pizzaList">
+  <tr>
+    <th>diameter</th>
+    <th>slices</th>
+    <th>toppings</th>
+    <th>price</th>
+  </tr>
+  <tr *ngFor="let pizza of pizzaList">
+    <td>{{ pizza.diameter }}</td>
+    <td>{{ pizza.slices }}</td>
+    <td>{{ pizza.toppings }}</td>
+    <td>{{ pizza.price }}</td>
+  </tr>
+</table>
