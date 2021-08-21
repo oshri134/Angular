@@ -1,0 +1,13 @@
+<h1>Sreach a vegetables</h1>
+<div>
+  <label>Search for: </label>
+  <input [(ngModel)]="searchText" />
+  <button (click)="filter($event.target)">submit</button>
+</div>
+<h2 *ngIf="searchText.length > 1">Please enter only 1 char</h2>
+
+<div *ngIf="searchText.length == 1">
+  <ul>
+    <li *ngFor="let x of filteredArr">{{ x }}</li>
+  </ul>
+</div>
